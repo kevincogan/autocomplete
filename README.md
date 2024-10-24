@@ -67,7 +67,7 @@ This project is a React-based Autocomplete component designed to help users sear
    Visit `http://localhost:3000` to view the application in your browser.
 
 
-```
+
 
 ## How It Works
 
