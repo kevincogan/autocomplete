@@ -1,0 +1,205 @@
+.App {
+  background-color: #CAF0F8;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+#temperature{
+
+}
+
+/* Cloud Animations */
+@keyframes moveClouds {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(110vw); }
+}
+
+/* Plane Animations */
+@keyframes movePlane {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100vw); }
+}
+
+.plane {
+  background: url('./assets/plane.png') no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 200px;
+  height: 1000px;
+  opacity: 1;
+  animation: movePlane 20s linear infinite;
+  z-index: 1;
+}
+
+
+.plane:nth-child(1) {
+  top: 5%;
+  left: 0%;
+  width: 20vw;
+  height: 20vh;
+  animation-duration: 25s;
+}
+
+.cloud {
+  background: url('./assets/cloud.png') no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  opacity: 0.6;
+  animation: moveClouds 20s linear infinite;
+  z-index: 1;
+}
+
+
+.cloud:nth-child(1) {
+  top: 5%;
+  left: 0%;
+  width: 20vw;
+  height: 20vh;
+  animation-duration: 25s;
+}
+
+.cloud:nth-child(2) {
+  top: 15%;
+  left: -12%;
+  width: 15vw;
+  height: 15vh;
+  animation-duration: 30s;
+  animation-delay: 3s;
+}
+
+.cloud:nth-child(3) {
+  top: 25%;
+  left: -12%;
+  width: 10vw;
+  height: 10vh;
+  animation-duration: 35s;
+  animation-delay: 6s;
+}
+
+.cloud:nth-child(4) {
+  top: 35%;
+  left: -12%;
+  width: 15vw;
+  height: 15vh;
+  animation-duration: 25s;
+  animation-delay: 1s;
+}
+
+.cloud:nth-child(5) {
+  top: 45%;
+  left: -12%;
+  width: 10vw;
+  height: 10vh;
+  animation-duration: 30s;
+  animation-delay: 4s;
+}
+
+.cloud:nth-child(6) {
+  top: 55%;
+  left: -12%;
+  width: 30vw;
+  height: 30vh;
+  animation-duration: 35s;
+  animation-delay: 2s;
+}
+
+
+.navbar {
+}
+
+
+.content {
+  text-align: center;
+  margin-top: 70px; 
+  z-index: 2; 
+  position: relative;
+}
+
+
+.form-container {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.inputBoxReact{
+  margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 10px;
+}
+
+form input, form select {
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+.prediction-result {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  text-align: center;
+  color: white;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.prediction-result.Cancelled {
+  background: linear-gradient(135deg, #ff6b6b, #c0392b);
+}
+
+.prediction-result.OnTime {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+.prediction-result p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.prediction-result strong {
+  display: block;
+  font-size: 1.5em;
+}
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media screen and (max-width: 768px) {
+  .form-container {
+    width: 90%;
+  }
+}
