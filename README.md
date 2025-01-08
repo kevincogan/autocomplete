@@ -2,17 +2,17 @@
 
 ## Overview
 
-This project is a React-based Autocomplete component designed to help users search for and select music data, including **artist names**, **album titles**, and **song titles**. The component dynamically fetches and filters suggestions based on the user's input and provides a smooth, user-friendly experience with features such as **debouncing**, **keyboard navigation**, **highlighted matches**, and **limiting results** to a maximum of 10 items.
+This project is a React-based Autocomplete component designed to provide users with a seamless search and selection experience for music-related data. It allows searching through **artist names**, **album titles**, and **song titles**. With dynamic fetching, filtering, and a polished user interface, this component offers features such as **debouncing**, **keyboard navigation**, **highlighting matches**, and **limiting results** to the top 10 items.
 
 ## Features
 
-1. **Real-time Search Suggestions**: Provides suggestions as the user types, filtering through the provided JSON dataset.
-2. **Multiple Search Categories**: Searches across artists, albums, and songs.
-3. **Debouncing**: Limits the frequency of search execution to avoid unnecessary processing.
-4. **Highlight Matching Text**: Highlights the portion of the suggestion that matches the user's input.
-5. **Keyboard Navigation**: Navigate through suggestions using the **up** and **down** arrow keys, and select with **Enter**.
-6. **Top 10 Suggestions**: Limits the number of suggestions displayed to the top 10 results.
-7. **Click Selection**: Users can click a suggestion to select it.
+1. **Real-time Search Suggestions**: Dynamically filters and displays suggestions as users type, using data from a JSON dataset.
+2. **Multiple Search Categories**: Supports searching across artists, albums, and songs in a single input field.
+3. **Debouncing**: Prevents frequent and redundant searches by introducing a delay (300ms) after user input.
+4. **Highlight Matching Text**: Highlights matching portions of text in the suggestions for clarity and ease of use.
+5. **Keyboard Navigation**: Allows navigating suggestions using **arrow keys** and selecting them with the **Enter** key.
+6. **Top 10 Suggestions**: Restricts the number of displayed suggestions to the 10 most relevant results to maintain a clean UI.
+7. **Click Selection**: Enables users to click on a suggestion to make a selection.
 
 ## Project Structure
 
@@ -36,51 +36,51 @@ This project is a React-based Autocomplete component designed to help users sear
 ### Steps
 
 1. **Clone the repository**:
-   ```
+   ```bash
    git clone https://github.com/kevincogan/autocomplete-project.git
    ```
-   
+
 2. **Navigate to the project directory**:
-   ```
+   ```bash
    cd autocomplete-project
    ```
 
 3. **Install the dependencies**:
-   ```
+   ```bash
    npm install
    ```
    or
-   ```
+   ```bash
    yarn install
    ```
 
 4. **Start the development server**:
-   ```
+   ```bash
    npm start
    ```
    or
-   ```
+   ```bash
    yarn start
    ```
 
 5. **Open the application**:
-   Visit `http://localhost:3000` to view the application in your browser.
-
-
-
+   Open `http://localhost:3000` in your browser to view the application.
 
 ## How It Works
 
-1. **Data Input**: As the user types into the input field, the component updates the query state.
-2. **Debouncing**: To optimize performance, the input is debounced by 300 milliseconds before executing the search.
-3. **Data Filtering**: The search query is compared to the artist, album, and song titles from the `data.json` file. Matches are displayed in a dropdown.
-4. **Highlight Matches**: The component highlights the matching portion of the text in the search results.
-5. **Keyboard Navigation**: Users can navigate through the list of suggestions using the arrow keys and select an option with the Enter key.
-6. **Result Limiting**: The suggestions list is limited to the top 10 results to avoid overcrowding.
+1. **Data Input**: Users type into the input field, which updates the internal query state in real time.
+2. **Debouncing**: To optimize performance, the input is debounced by 300 milliseconds before triggering the search function.
+3. **Data Filtering**: The search query is matched against artist names, album titles, and song titles in the `data.json` file. Matching results are displayed in a dropdown.
+4. **Highlight Matches**: The matching portion of each suggestion is highlighted for better visibility.
+5. **Keyboard Navigation**: Users can navigate through the list of suggestions using the **arrow keys** and select a suggestion with the **Enter** key.
+6. **Result Limiting**: The suggestions dropdown is capped at the top 10 results to maintain focus and avoid clutter.
 
+## Additional Notes
+
+- **Customization**: The component can be customized further for other use cases or datasets.
+- **Responsiveness**: The component is styled for a responsive and user-friendly experience across devices.
 
 ## License
 
 This project is licensed under the MIT License.
 
----
